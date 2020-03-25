@@ -1,4 +1,4 @@
-//Cole Constantino | Find the min or max depth of a binary tree
+//Cole Constantino | Find the min and max depth of a binary tree
 
 public class BSTDepth{
   public static int maxDepth(TreeNode root){
