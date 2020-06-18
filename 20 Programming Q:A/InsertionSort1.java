@@ -1,16 +1,16 @@
 //Cole Constantino | Sort array using insertion sort method
 public class InsertionSort1{
-  public void sortMeBitch(int[] arr){
+  public void sortMe(int[] arr){
     //loop forward and at each index loop backwards until it is 
     //no longer bigger than the next
     for(int i = 1; i < arr.length; i++){
-      int temp = arr[i];
-      int count = i;
-      while(temp < arr[count-1]){
-        arr[count] = arr[count -1];
-        arr[count-1] = temp;
-        count--;
+      int j = i -1;
+      int temp = arr[j+1];
+      while(j >= 0 && arr[j] > temp){
+        arr[j+1] = arr[j];
+        j--;
       }
+      arr[j+1] = temp;
     }
   }
   
@@ -22,7 +22,7 @@ public class InsertionSort1{
   public static void main(String[] args){
     int[] a = {2,43,5,3,7,22,54};
     InsertionSort1 is = new InsertionSort1();
-    is.sortMeBitch(a);
+    is.sortMe(a);
     print(a);
   }
 }
